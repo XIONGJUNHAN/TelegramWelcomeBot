@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"""Simple Bot to reply to Telegram messages.
+"""Simple Bot to welcome newly joined members.
 
 This program is dedicated to the public domain under the CC0 license.
 
@@ -12,9 +12,8 @@ the Dispatcher and registered at their respective places.
 Then, the bot is started and runs until we press Ctrl-C on the command line.
 
 Usage:
-Basic Echobot example, repeats messages.
-Press Ctrl-C on the command line or send a signal to the process to stop the
-bot.
+
+Welcome new members and provide some basic information.
 """
 
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, Job
@@ -87,7 +86,7 @@ def main():
     """Start the bot."""
     # Create the EventHandler and pass it your bot's token.
     welcomeList = []
-    token = '507524179:AAHVM1s7VLEabaRUwTJUPOUWQKMJBBtYD-A'
+    token = '%s' % 'your own bot token.'
     updater = Updater("%s"%token)
 
     # Get the dispatcher to register handlers
